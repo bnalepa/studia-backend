@@ -3,6 +3,8 @@ using ApplicationCore.Interfaces;
 using ApplicationCore.Interfaces.Repository;
 using ApplicationCore.Models;
 using Infrastructure.Memory.Repository;
+using Infrastructure.MongoDB.Entities;
+using Infrastructure.MongoDB;
 using Infrastructure.Services;
 using Web;
 
@@ -20,6 +22,9 @@ builder.Services.AddTransient<IQuizUserService, QuizUserServiceEF>();
 builder.Services.AddDbContext<QuizDbContext>();
 //builder.Services.AddTransient<IQuizUserService, QuizUserService>();
 builder.Services.AddSingleton<IQuizUserService, QuizUserService>();
+
+builder.Services.Configure<MongoDBSettings>(builder.Configuration.GetSection("MongoDB"));
+builder.Services.AddSingleton<QuizUserServiceMongoDB>();
 
 builder.Services.AddSwaggerGen();
 

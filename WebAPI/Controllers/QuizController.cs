@@ -10,6 +10,7 @@ public class QuizController : Controller
 {
     private readonly IQuizUserService _service;
 
+
     public QuizController(IQuizUserService userService)
     {
         _service = userService;
@@ -74,4 +75,9 @@ public class QuizController : Controller
             } ).ToList()
         };
     }
-}
+    [HttpGet("/api/v2/quizzes")]
+    public IEnumerable<Quiz> GetAllQuizzes()
+    {
+        return _service.FindAllQuizzess();
+    }
+} 
