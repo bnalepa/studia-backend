@@ -75,9 +75,5 @@ public class QuizController : Controller
             } ).ToList()
         };
     }
-    [HttpGet("/api/v2/quizzes")]
-    public IEnumerable<Quiz> GetAllQuizzes()
-    {
-        return _service.FindAllQuizzess();
-    }
+
 } 

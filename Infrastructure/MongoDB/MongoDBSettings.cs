@@ -11,5 +11,6 @@ namespace Infrastructure.MongoDB
         public string ConnectionUri { get; set; } = null!;
         public string DatabaseName { get; set; } = null!;
         public string QuizCollection { get; set; } = null!;
+        public string AnswersCollection { get; set; } = null!;
     }
 }

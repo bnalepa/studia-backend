@@ -13,6 +13,7 @@ namespace Infrastructure.MongoDB.Entities
     public class QuizUserServiceMongoDB : IQuizUserService
     {
         private readonly IMongoCollection<QuizMongoEntity> _quizzes;
+        private readonly IMongoCollection<QuizMongoEntity> _answers;
         private readonly MongoClient _client;
 
         public QuizUserServiceMongoDB(IOptions<MongoDBSettings> settings)
@@ -20,6 +21,7 @@ namespace Infrastructure.MongoDB.Entities
             _client = new MongoClient(settings.Value.ConnectionUri);
             IMongoDatabase database = _client.GetDatabase(settings.Value.DatabaseName);
             _quizzes = database.GetCollection<QuizMongoEntity>(settings.Value.QuizCollection);
+            _answers = database.GetCollection<QuizMongoEntity>(settings.Value.AnswersCollection);
         }
 
         public IEnumerable<Quiz> FindAllQuizzess()
@@ -62,7 +64,7 @@ namespace Infrastructure.MongoDB.Entities
                 ).FirstOrDefault();
         }
 
-        public QuizItemUserAnswer SaveUserAnswerForQuiz(int quizId, int quizItemId, int userId, string answer)
+        public void SaveUserAnswerForQuiz(int quizId, int quizItemId, int userId, string answer)
         {
             throw new NotImplementedException();
         }
