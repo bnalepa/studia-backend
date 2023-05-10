@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleGRPCClient", "Consol
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApplicationCore", "ApplicationCore\ApplicationCore.csproj", "{AA19C8CA-3536-4225-AB49-B6E76F9FA714}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject", "TestProject\TestProject.csproj", "{FB06B041-98C2-435D-BBFB-34948ABAE9B8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{AA19C8CA-3536-4225-AB49-B6E76F9FA714}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA19C8CA-3536-4225-AB49-B6E76F9FA714}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA19C8CA-3536-4225-AB49-B6E76F9FA714}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB06B041-98C2-435D-BBFB-34948ABAE9B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB06B041-98C2-435D-BBFB-34948ABAE9B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB06B041-98C2-435D-BBFB-34948ABAE9B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB06B041-98C2-435D-BBFB-34948ABAE9B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

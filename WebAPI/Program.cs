@@ -44,3 +44,6 @@ app.UseAuthorization();
 app.MapControllers();
 app.Seed();
 app.Run();
+public partial class Program
+{
+}

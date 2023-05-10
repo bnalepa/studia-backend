@@ -17,10 +17,16 @@ public class QuizDbContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        base.OnConfiguring( optionsBuilder );
+        base.OnConfiguring(optionsBuilder);
         optionsBuilder.UseSqlServer(
-            "Data Source=JUSTCHRIST;Initial Catalog=lab;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False" );
+            "Data Source=backend_BN;Initial Catalog=lab;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False");
     }
+
+    public QuizDbContext(DbContextOptions<QuizDbContext> options)
+        : base(options)
+        {
+
+        }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
